@@ -9,9 +9,9 @@ import pandas as pd
 import numpy as np
 
 app = Flask(__name__)
-
 mysql = MySQL(app)
 
+# Configuración de la base de datos
 app.config['MYSQL_USER'] = 'usr'
 app.config['MYSQL_PASSWORD'] = '123'
 app.config['MYSQL_HOST'] = 'localhost'
@@ -22,7 +22,6 @@ feelings_analyzer = pipeline(task = "text-classification", model="pysentimiento/
 
 # Modelo para predecir stocks
 modelo = load_model('modelo.h5')
-print('hello world')
 
 @app.route('/')
 def index():
@@ -45,19 +44,16 @@ def inserReview():
     cursor.close()
     return redirect('/')
 
-
-@app.route('/model')
-def model():
-    return render_template('model.html')
-
+# Desplegar gráfica de predicción de la empresa
 @app.route('/predict', methods=['GET'])
 def predict():
-    company = request.args.get('company')
+    company = request.args.get('company', 'none')
+    if company == 'none':
+        return redirect('/')
     show_future(company)
     return render_template('predict.html', company=company)
 
-
-
+# Llamar al modelo para obtener predicción de la compañía escogida
 def show_future(company, future_days=15):
   # Load data
   csv = "datos/" + company + "_2020_2023.csv"
@@ -116,8 +112,6 @@ def show_future(company, future_days=15):
   plt.ylabel('Precio ($)')
   plt.legend()
   plt.savefig(f"static/img/{company}.png")
-
-
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

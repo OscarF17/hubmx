@@ -15,7 +15,7 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand mx-5" href="/">HubMX</a>
         <button
           class="navbar-toggler"
@@ -57,19 +57,106 @@
       </nav>
     </header>
 
-    <main>
+    <main class="mt-5">
       <h1 class="display-1 text-center">Bienvenido a HubMX</h1>
-      <h2 class="display-2 text-center">
+      <h2 class="display-2 text-center mb-5">
         El hogar para tu siguiente inversión
       </h2>
 
+      <h3 class="text-center display-5 mb-3">¿Qué ofrecemos en HubMX?</h3>
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col my-auto">
+            <h4 class="display-4">Networking</h4>
+            <p class="feat-text">Conoce a emprendedores como tú</p>
+            <ul class="list-text">
+              <li><p>Busca socios que quieran colaborar en tu proyecto</p></li>
+              <li>
+                <p>
+                  Encuentra talento que pueda llevar tu proyecto al siguiente
+                  nivel
+                </p>
+              </li>
+              <li><p>Aprende de los proyectos de otros emprendedores</p></li>
+            </ul>
+          </div>
+          <div class="col">
+            <img
+              style="width: 100%"
+              class="rounded"
+              src="/static/img/networking.jpg"
+              alt="networking"
+            />
+          </div>
+        </div>
+        <div class="row text-center mb-5">
+          <div class="col">
+            <img
+              style="width: 100%"
+              class="rounded"
+              src="/static/img/mentorship.jpg"
+              alt="mentorship"
+            />
+          </div>
+          <div class="col my-auto">
+            <h4 class="display-4">Mentoría</h4>
+            <p class="feat-text">Se asesorado por emprendedores exitosos</p>
+            <ul class="list-text">
+              <li>
+                <p>Recibe apoyo y consejos de líderes de proyectos exitosos</p>
+              </li>
+              <li>
+                <p>
+                  Aprende de los mejores sobre como convertir tu idea en un
+                  proyecto exitoso
+                </p>
+              </li>
+              <li>
+                <p>Descubre los secretos necesarios para alcanzar el éxito</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col my-auto">
+            <h4 class="display-4">Inversiones</h4>
+            <p class="feat-text">Encuentra financiamiento para tu proyecto</p>
+            <ul class="list-text">
+              <li>
+                <p>
+                  Conecta con inversionistas que cuentan con el capital para
+                  financiar tu proyecto
+                </p>
+              </li>
+              <li>
+                <p>Descubre como convertir tu idea en un negocio rentable</p>
+              </li>
+              <li>
+                <p>
+                  Recibe consejos de primera mano de qué busca un inversionista
+                  para financiar proyectos
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <img
+              style="width: 100%"
+              class="rounded"
+              src="/static/img/investing.jpg"
+              alt="investing"
+            />
+          </div>
+        </div>
+      </div>
+
       <h3 class="text-center display-5 mt-5">
-        Cuéntenos que opinas de este sitio
+        Cuéntanos que opinas de nuestro proyecto
       </h3>
 
       <form class="mx-auto w-50 mt-3" action="/insertReview" method="POST">
         <div class="form-group">
-          <label for="user" class="label-text">Ingrese su nombre</label>
+          <label for="user" class="label-text">Ingresa tu nombre</label>
           <input
             class="form-control"
             placeholder="Linus Torvalds"
@@ -79,7 +166,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="text" class="label-text">Ingrese su reseña</label>
+          <label for="text" class="label-text">Ingresa tu reseña</label>
           <input
             class="form-control"
             placeholder="Este sitio es..."
