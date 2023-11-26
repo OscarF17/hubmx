@@ -107,7 +107,7 @@ def show_future(company, future_days=15):
       future_x.append(future_price)
 
   # Plotting
-  fig = plt.figure(figsize=(14, 7))
+  plt.figure(figsize=(14, 7))
   # Solamente mostrar cierto número de días reales
   plt.plot(data.index[-90:], real_prices[-90:], label='Precios reales', color='blue')
   plt.plot(future_dates, future_x, label='Predicciones', color='green', linestyle='dashed')

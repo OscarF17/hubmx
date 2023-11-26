@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/static/css/styles.css" />
-    <title>Document</title>
+    <title>HubMX</title>
   </head>
   <body>
     <header>
@@ -57,7 +57,33 @@
     </header>
 
     <main>
-      <img src="/static/img/{{company}}.png" alt="{{company}}" />
+      <h1 class="text-center display-1">Un vistazo al futuro</h1>
+      <h2 class="text-center display-5">
+        Gracias a la IA podemos predecir el futuro de las startups más
+        importantes del momento
+      </h2>
+
+      <p class="text-center p-text mt-5">
+        La siguiente información fue generada con inteligencia artificial.
+        Observa el pasado de la compañía para predecir el valor de sus acciones
+        en los siguientes <strong>15 días</strong>
+      </p>
+      <div class="text-center">
+        <img
+          src="/static/img/{{company}}.png"
+          alt="{{company}}"
+          class="mx-0 my-0"
+        />
+      </div>
+
+      <p class="p-text text-center mb-5">
+        La información generada por el modelo es una predicción creada
+        analizando el valor de las acciones de la empresa desde el 2021 hasta
+        noviembre 2023. La gráfica compara el precio de los últimos dos meses
+        contra el de los siguientes 15 días. El modelo busca predecir el
+        comportamiento general del precio de las acciones de forma general para
+        guiar a inversionistas en sus decisiones de comprar o vender.
+      </p>
     </main>
   </body>
 </html>
