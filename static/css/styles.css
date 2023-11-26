@@ -1,0 +1,14 @@
+.cont {
+  width: 35%;
+  margin: auto;
+}
+
+.review {
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.review-img {
+  width: 100px;
+}
