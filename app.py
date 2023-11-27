@@ -36,6 +36,8 @@ def index():
 def inserReview():
     user = request.form['user']
     text = request.form['text']
+    if user == "" or text == "":
+        return redirect('/')
     analysis = feelings_analyzer(text)
     sentiment = analysis[0]['label']
     cursor = mysql.connection.cursor()
